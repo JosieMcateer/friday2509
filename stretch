@@ -1,7 +1,7 @@
 stretch goals
 
-For the stretch goals i created a view called- subcategorydetails. 
-This made it easier to read but also gave me a bigger challenge to test my learnings on views.
+For the stretch goals i created a view called- subcategorydetails. In this i joined the tables.  
+This made it easier to read as i am not joining in every query, but also gave me a bigger challenge to test my learnings on views.
 create view subcategoryname
 
 task 4: most popular subcategory by specific date
