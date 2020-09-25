@@ -20,11 +20,16 @@ I think that my extra notes and using resources such as youtube and QA community
 
 I started at the begining with each query and built my way up. 
 
+In "stretch" file i have documented out all my code so that i can retrieve anytime. 
+
 # What didn't go as planned?
 
-I did get myself confused
-
+I did get myself confused as i was trying to do all of the code in one. I managed to for the first 3. But in stretch i have written out my workings from the begining.
+I didn't document the code for 1-3 which i will do going fowards as it helps me to understand and makes sense when i come back to it.
 
 # Possible improvements for the future?
 
+I will use plurasight etc so that i can try and be more confident.
+Alwayswork from the start until i am 100% confident as this works better for me and is also quicker as less errors.
+Document my code with notes going fowards
 
