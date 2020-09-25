@@ -4,6 +4,34 @@ For the stretch goals i created a view called- subcategorydetails. In this i joi
 This made it easier to read as i am not joining in every query, but also gave me a bigger challenge to test my learnings on views.
 create view subcategoryname
 
+view- joins
+select * from subcategory,product,sales where subcategory.subcategoryID = product.SubcategoryID and product.productID = sales.productID;
+
+select subcategory.subcategoryName,product.productname, Dateofsale from subcategory,product,sales where subcategory.subcategoryID = product.SubcategoryID and product.productID = sales.productID;
+
+select subcategory.subcategoryName,product.productname, Dateofsale from subcategory,product,sales where subcategory.subcategoryID = product.SubcategoryID and product.productID = sales.productID;
+
+select subcategory.subcategoryName,count(*) from subcategory,product,sales where subcategory.subcategoryID = product.SubcategoryID and product.productID = sales.productID group by subcategory.subcategoryname;
+
+select subcategory.subcategoryName,count(*) from subcategory,product,sales where subcategory.subcategoryID = product.SubcategoryID and product.productID = sales.productID and dateofsale = '2020-09-21' group by subcategory.subcategoryname;
+
+
+select subcategory.subcategoryName,count(*) from subcategory,product,sales where subcategory.subcategoryID = product.SubcategoryID and product.productID = sales.productID and dateofsale = '2020-09-25' group by subcategory.subcategoryname;
+
+select count(*) as count from subcategory,product,sales where subcategory.subcategoryID = product.SubcategoryID and product.productID = sales.productID and dateofsale = '2020-09-25' group by subcategory.subcategoryname;
+
+select subcategory.subcategoryName,product.productname, Dateofsale from subcategory,product,sales where subcategory.subcategoryID = product.SubcategoryID and product.productID = sales.productID group by subcategory.subcategoryname;
+
+select subcategory.subcategoryName,product.productname, Dateofsale from subcategory,product,sales where subcategory.subcategoryID = product.SubcategoryID and product.productID = sales.productID ;
+
+Create view SubcategoryDetails as select subcategory.subcategoryName,product.productname, Dateofsale from subcategory,product,sales where subcategory.subcategoryID = product.SubcategoryID and product.productID = sales.productID ;
+
+Select * from subcategorydetails;
+
+
+
+
+
 task 4: most popular subcategory by specific date
 
 First i started by: 
