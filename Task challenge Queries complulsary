@@ -1,7 +1,17 @@
 Tasks:
 
-Task 1: most popular product sold on a specific date:
+create database shop;
+use shop;
+create table Category(....
+create table SubCategory( ...
+create table product(....
+create table sales(....
 
+insert into...
+
+
+
+Task 1: most popular product sold on a specific date:
 
 show all product ID`s grouped: select ProductID, count(productID)as "total" from sales group by ProductID; 
 
