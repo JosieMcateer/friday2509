@@ -1,0 +1,5 @@
+stretch goals
+
+most popular subcategory by specific date
+
+select Subcategory.SubcategoryName, product.productname, Sales.ProductID, Count(*) as "popularity", Sales.DateofSale from Subcategory, Product, Sales where Subcategory.SubcategoryName = Sales.ProductID and Dateofsale = "2020-09-21" group by DateofSale, Subcategory.Subcategoryname having count(*) = (select max(r) from (select count(*) as r, SubcategoryName from Sales where Dateofsale = "2020-09-21" group by DateofSale, Subcategoryname) as myTable);
