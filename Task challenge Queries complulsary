@@ -1,0 +1,34 @@
+Tasks:
+
+Task 1: most popular product sold on a specific date:
+
+
+show all product ID`s grouped: select ProductID, count(productID)as "total" from sales group by ProductID; 
+
+to find most popular product ID: select ProductID, max(pop)from (select ProductID, count(productID)as 'Pop' from sales group by ProductID)as MyTable;
+
+show product ID, total amount of sales for each and the most recent sale date: select ProductID, count(productID)as 'total', DateofSale from sales group by ProductID;
+
+Most popular on the specific date of the 24/09/2020.
+select Product.ProductName, Sales.ProductID, Count(*), Sales.DateofSale from Product, Sales where Sales.ProductID = Product.ProductID and DateofSale ="2020-09-24" group by DateofSale, Sales.ProductID having count(*) = (select max(r) from (select count(*) as r, ProductID from Sales where Dateofsale = "2020-09-24" group by DateofSale, ProductID) as myTable);
+
+
+
+
+task 2: most popular product sold last week:
+
+week(Curdate())-1 = current week -1 week = last week
+
+select Product.ProductName, Sales.ProductID, Count(*) as "popularity", week(Sales.DateofSale) from Product, Sales where Sales.ProductID = Product.ProductID and week(DateofSale) = week(curdate())-1 and year(Dateofsale) = year(curdate()) group by week(DateofSale), Sales.ProductID having count(*) = (select max(r) from (select count(*) as r, ProductID from Sales where week(Dateofsale) = week(curdate())-1 and year(Dateofsale) = year(curdate()) group by DateofSale, ProductID) as myTable);
+
+
+
+Task 3: most popular product sold on a specific month:
+
+august 2020
+
+month(dateofsale)= "08" August and year(dateofsale) = 2020
+
+
+select Product.ProductName, Sales.ProductID, Count(*) as "popularity", month(Sales.DateofSale) from Product, Sales where Sales.ProductID = Product.ProductID and month(DateofSale) = "08" and year(dateofsale) = 2020 group by month(DateofSale), Sales.ProductID having count(*) = (select max(r) from (select count(*) as r, ProductID from Sales where month(Dateofsale) = "08" and year(dateofsale) = 2020 group by DateofSale, ProductID) as myTable);
+(There are 2)
