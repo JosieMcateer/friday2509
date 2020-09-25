@@ -11,16 +11,18 @@ I have inserted these into 2 seperate txt files and pushed into ths repository.
 
 # How i expected the challenge to go?
 
-I expectedt struggle with this challenge. I missed Monday- joins and inner queries and have been trying to catch up all week. 
+I expected to struggle with this challenge. I missed Monday- joins and inner queries and have been trying to catch up all week. 
 I write a lot of notes so i knew I had the information however it was just piecing it together and working out what goes where.
+I was expecting it to be a long task- which it was, i have been 9am-2:30pm non stop working on this.
+I wasn't sure on a ERD diagram so expected t0 be a bit confused.
 
 # What went well?
 
 I think that my extra notes and using resources such as youtube and QA community really helped me.
-
 I started at the begining with each query and built my way up. 
-
 In "stretch" file i have documented out all my code so that i can retrieve anytime. 
+
+I completed an ERD diagram but did have to ask for some clarification from Shafeeq as QA community was a bit confusing in my opinion.
 
 # What didn't go as planned?
 
