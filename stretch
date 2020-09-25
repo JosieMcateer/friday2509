@@ -1,10 +1,10 @@
-stretch goals
+#stretch goals
 
 For the stretch goals i created a view called- subcategorydetails. In this i joined the tables.  
 This made it easier to read as i am not joining in every query, but also gave me a bigger challenge to test my learnings on views.
 create view subcategoryname
 
-view- joins
+#view- joins (workng out notes)
 select * from subcategory,product,sales where subcategory.subcategoryID = product.SubcategoryID and product.productID = sales.productID;
 
 select subcategory.subcategoryName,product.productname, Dateofsale from subcategory,product,sales where subcategory.subcategoryID = product.SubcategoryID and product.productID = sales.productID;
@@ -30,9 +30,7 @@ Select * from subcategorydetails;
 
 
 
-
-
-task 4: most popular subcategory by specific date
+#Stretch task 4: most popular subcategory by specific date
 
 First i started by: 
  viewing all records in my view:
@@ -56,7 +54,7 @@ Final code:
 select subcategoryname from subcategorydetails where dateofsale = '2020-09-24' group by subcategoryname having count(*) =(select max(num) from  (select count(*) as num from subcategorydetails where dateofsale ='2020-09-24 'group by subcategoryname) as table1);
 
 
-Stretch 5:Most popular for last week:
+# Stretch task 5:Most popular for last week:
 
 First I displayed just the products that had sales last week:
 select subcategoryname from subcategorydetails where week(dateofsale) = week(curdate())-1 group by subcategoryname;
@@ -67,7 +65,7 @@ select subcategoryname from subcategorydetails where week(dateofsale) = week(cur
 
 
 
-Stretch 6: most popular on a specific month:
+# Stretch task 6: most popular on a specific month:
 
 irst I displayed just the products that had sales in august 2020:
 select subcategoryname from subcategorydetails where month(dateofsale) = 08 group and year(dateofsale) = 2020 by subcategoryname;
